@@ -44,7 +44,7 @@ class BracketGame extends React.PureComponent<BracketGameProps> {
       teamSeparatorStyle: { stroke: '#444549', strokeWidth: 1 }
     },
 
-    topText: ({ scheduled }: Game) => new Date(scheduled).toLocaleDateString(),
+    topText: ({ scheduled }: Game) => scheduled ? new Date(scheduled).toLocaleDateString(): "",
     bottomText: ({ name, bracketLabel }: Game) => _.compact([ name, bracketLabel ]).join(' - ')
   };
 

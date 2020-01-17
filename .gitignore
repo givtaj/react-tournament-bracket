@@ -52,4 +52,4 @@ eb-*
 *.DS_Store
 
 dist/
-
+lib/
