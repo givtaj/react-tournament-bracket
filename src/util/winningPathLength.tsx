@@ -15,7 +15,7 @@ export default function winningPathLength(game: Game, visited: { [ id: string ]:
           Math,
           _.map(
             game.sides,
-            ({ seed }) => (seed && seed.sourceGame && seed.rank == 1) ?
+            ({ seed }) => (seed && seed.sourceGame) ?
               winningPathLength(seed.sourceGame, visited) : 0
           )
         ) :
